@@ -9,7 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "filament/filament": "^3.2",
+        "filament/filament": "dev-patch-2",
         "internachi/modular": "^2.2",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
@@ -68,12 +68,19 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "repositories": [
         {
             "type": "path",
             "url": "app-modules/*",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "../filament/packages/*",
             "options": {
                 "symlink": true
             }
